@@ -1,1 +1,39 @@
-{     "devDependencies": {         "prop-types": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-prop-types",     "homepage": "https://github.com/npmdoc/node-npmdoc-prop-types",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-prop-types.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "api documentation for [prop-types (v15.5.8)](https://facebook.github.io/react/) [![npm package](https://img.shields.io/npm/v/npmdoc-prop-types.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-prop-types) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-prop-types.svg)](https://travis-ci.org/npmdoc/node-npmdoc-prop-types)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "prop-types": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-prop-types",
+    "keywords": [
+        "documentation",
+        "prop-types"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_prop_types.js",
+    "name": "npmdoc-prop-types",
+    "nameAlias": "npmdoc_prop_types",
+    "nameOriginal": "npmdoc-prop-types",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-prop-types.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
