@@ -1,0 +1,3267 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://facebook.github.io/react/">prop-types (v15.5.8)</a>
+</h1>
+<h4>Runtime type checking for React props and similar objects.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types">module prop-types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.any">
+            function <span class="apidocSignatureSpan">prop-types.</span>any
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.any.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>any.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.array">
+            function <span class="apidocSignatureSpan">prop-types.</span>array
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.array.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>array.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.arrayOf">
+            function <span class="apidocSignatureSpan">prop-types.</span>arrayOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.bool">
+            function <span class="apidocSignatureSpan">prop-types.</span>bool
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.bool.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>bool.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.checkPropTypes">
+            function <span class="apidocSignatureSpan">prop-types.</span>checkPropTypes
+            <span class="apidocSignatureSpan">(typeSpecs, values, location, componentName, getStack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.element">
+            function <span class="apidocSignatureSpan">prop-types.</span>element
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.element.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>element.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.factory">
+            function <span class="apidocSignatureSpan">prop-types.</span>factory
+            <span class="apidocSignatureSpan">(isValidElement)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.factoryWithThrowingShims">
+            function <span class="apidocSignatureSpan">prop-types.</span>factoryWithThrowingShims
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.factoryWithTypeCheckers">
+            function <span class="apidocSignatureSpan">prop-types.</span>factoryWithTypeCheckers
+            <span class="apidocSignatureSpan">(isValidElement, throwOnDirectAccess)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.func">
+            function <span class="apidocSignatureSpan">prop-types.</span>func
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.func.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>func.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.instanceOf">
+            function <span class="apidocSignatureSpan">prop-types.</span>instanceOf
+            <span class="apidocSignatureSpan">(expectedClass)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.node">
+            function <span class="apidocSignatureSpan">prop-types.</span>node
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.node.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>node.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.number">
+            function <span class="apidocSignatureSpan">prop-types.</span>number
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.number.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>number.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.object">
+            function <span class="apidocSignatureSpan">prop-types.</span>object
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.object.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>object.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.objectOf">
+            function <span class="apidocSignatureSpan">prop-types.</span>objectOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.oneOf">
+            function <span class="apidocSignatureSpan">prop-types.</span>oneOf
+            <span class="apidocSignatureSpan">(expectedValues)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.oneOfType">
+            function <span class="apidocSignatureSpan">prop-types.</span>oneOfType
+            <span class="apidocSignatureSpan">(arrayOfTypeCheckers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.shape">
+            function <span class="apidocSignatureSpan">prop-types.</span>shape
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.string">
+            function <span class="apidocSignatureSpan">prop-types.</span>string
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.string.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>string.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.symbol">
+            function <span class="apidocSignatureSpan">prop-types.</span>symbol
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.symbol.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.</span>symbol.isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">prop-types.</span>PropTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">prop-types.</span>prop_types</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.any">module prop-types.any</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.any.any">
+            function <span class="apidocSignatureSpan">prop-types.</span>any
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.any.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.any.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.any.isRequired">module prop-types.any.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.any.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.any.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.array">module prop-types.array</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.array.array">
+            function <span class="apidocSignatureSpan">prop-types.</span>array
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.array.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.array.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.array.isRequired">module prop-types.array.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.array.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.array.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.arrayOf">module prop-types.arrayOf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.arrayOf.arrayOf">
+            function <span class="apidocSignatureSpan">prop-types.</span>arrayOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.bool">module prop-types.bool</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.bool.bool">
+            function <span class="apidocSignatureSpan">prop-types.</span>bool
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.bool.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.bool.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.bool.isRequired">module prop-types.bool.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.bool.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.bool.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.checkPropTypes">module prop-types.checkPropTypes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.checkPropTypes.checkPropTypes">
+            function <span class="apidocSignatureSpan">prop-types.</span>checkPropTypes
+            <span class="apidocSignatureSpan">(typeSpecs, values, location, componentName, getStack)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.element">module prop-types.element</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.element.element">
+            function <span class="apidocSignatureSpan">prop-types.</span>element
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.element.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.element.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.element.isRequired">module prop-types.element.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.element.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.element.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.factory">module prop-types.factory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.factory.factory">
+            function <span class="apidocSignatureSpan">prop-types.</span>factory
+            <span class="apidocSignatureSpan">(isValidElement)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.factoryWithThrowingShims">module prop-types.factoryWithThrowingShims</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.factoryWithThrowingShims.factoryWithThrowingShims">
+            function <span class="apidocSignatureSpan">prop-types.</span>factoryWithThrowingShims
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.factoryWithTypeCheckers">module prop-types.factoryWithTypeCheckers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.factoryWithTypeCheckers.factoryWithTypeCheckers">
+            function <span class="apidocSignatureSpan">prop-types.</span>factoryWithTypeCheckers
+            <span class="apidocSignatureSpan">(isValidElement, throwOnDirectAccess)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.func">module prop-types.func</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.func.func">
+            function <span class="apidocSignatureSpan">prop-types.</span>func
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.func.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.func.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.func.isRequired">module prop-types.func.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.func.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.func.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.instanceOf">module prop-types.instanceOf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.instanceOf.instanceOf">
+            function <span class="apidocSignatureSpan">prop-types.</span>instanceOf
+            <span class="apidocSignatureSpan">(expectedClass)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.node">module prop-types.node</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.node.node">
+            function <span class="apidocSignatureSpan">prop-types.</span>node
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.node.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.node.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.node.isRequired">module prop-types.node.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.node.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.node.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.number">module prop-types.number</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.number.number">
+            function <span class="apidocSignatureSpan">prop-types.</span>number
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.number.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.number.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.number.isRequired">module prop-types.number.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.number.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.number.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.object">module prop-types.object</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.object.object">
+            function <span class="apidocSignatureSpan">prop-types.</span>object
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.object.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.object.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.object.isRequired">module prop-types.object.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.object.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.object.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.objectOf">module prop-types.objectOf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.objectOf.objectOf">
+            function <span class="apidocSignatureSpan">prop-types.</span>objectOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.oneOf">module prop-types.oneOf</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.oneOf.oneOf">
+            function <span class="apidocSignatureSpan">prop-types.</span>oneOf
+            <span class="apidocSignatureSpan">(expectedValues)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.oneOfType">module prop-types.oneOfType</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.oneOfType.oneOfType">
+            function <span class="apidocSignatureSpan">prop-types.</span>oneOfType
+            <span class="apidocSignatureSpan">(arrayOfTypeCheckers)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.prop_types">module prop-types.prop_types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.any">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>any
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.array">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>array
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.arrayOf">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>arrayOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.bool">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>bool
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.checkPropTypes">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>checkPropTypes
+            <span class="apidocSignatureSpan">(typeSpecs, values, location, componentName, getStack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.element">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>element
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.func">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>func
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.instanceOf">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>instanceOf
+            <span class="apidocSignatureSpan">(expectedClass)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.node">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>node
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.number">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>number
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.object">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>object
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.objectOf">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>objectOf
+            <span class="apidocSignatureSpan">(typeChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.oneOf">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>oneOf
+            <span class="apidocSignatureSpan">(expectedValues)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.oneOfType">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>oneOfType
+            <span class="apidocSignatureSpan">(arrayOfTypeCheckers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.shape">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>shape
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.string">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>string
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.prop_types.symbol">
+            function <span class="apidocSignatureSpan">prop-types.prop_types.</span>symbol
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">prop-types.prop_types.</span>PropTypes</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.shape">module prop-types.shape</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.shape.shape">
+            function <span class="apidocSignatureSpan">prop-types.</span>shape
+            <span class="apidocSignatureSpan">(shapeTypes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.string">module prop-types.string</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.string.string">
+            function <span class="apidocSignatureSpan">prop-types.</span>string
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.string.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.string.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.string.isRequired">module prop-types.string.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.string.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.string.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.symbol">module prop-types.symbol</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.symbol.symbol">
+            function <span class="apidocSignatureSpan">prop-types.</span>symbol
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.symbol.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.symbol.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.prop-types.symbol.isRequired">module prop-types.symbol.isRequired</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.prop-types.symbol.isRequired.isRequired">
+            function <span class="apidocSignatureSpan">prop-types.symbol.</span>isRequired
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types" id="apidoc.module.prop-types">module prop-types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.any" id="apidoc.element.prop-types.any">
+        function <span class="apidocSignatureSpan">prop-types.</span>any
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">any = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.any.isRequired" id="apidoc.element.prop-types.any.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>any.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">any.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.array" id="apidoc.element.prop-types.array">
+        function <span class="apidocSignatureSpan">prop-types.</span>array
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">array = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.array.isRequired" id="apidoc.element.prop-types.array.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>array.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">array.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.arrayOf" id="apidoc.element.prop-types.arrayOf">
+        function <span class="apidocSignatureSpan">prop-types.</span>arrayOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createArrayOfTypeChecker(typeChecker) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (typeof typeChecker !== 'function') {
+      return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation
+ inside arrayOf.');
+    }
+    var propValue = props[propName];
+    if (!Array.isArray(propValue)) {
+      var propType = getPropType(propValue);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' +
+componentName + '`, expected an array.'));
+    }
+    for (var i = 0; i &lt; propValue.length; i++) {
+      var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+      if (error instanceof Error) {
+        return error;
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.bool" id="apidoc.element.prop-types.bool">
+        function <span class="apidocSignatureSpan">prop-types.</span>bool
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bool = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+```
+
+However, code like this will not work with the `prop-types` package:
+
+```js
+// Will not work with `prop-types` package!
+var errorOrNull = PropTypes.<span class="apidocCodeKeywordSpan">bool</span>(42, 'myProp', 'MyComponent', '
+;prop');
+```
+
+It will throw an error:
+
+```
+Calling PropTypes validators directly is not supported by the `prop-types` package.
+Use PropTypes.checkPropTypes() to call them.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.bool.isRequired" id="apidoc.element.prop-types.bool.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>bool.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bool.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.checkPropTypes" id="apidoc.element.prop-types.checkPropTypes">
+        function <span class="apidocSignatureSpan">prop-types.</span>checkPropTypes
+        <span class="apidocSignatureSpan">(typeSpecs, values, location, componentName, getStack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+  if (process.env.NODE_ENV !== 'production') {
+    for (var typeSpecName in typeSpecs) {
+      if (typeSpecs.hasOwnProperty(typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually
+from ' + 'React.PropTypes.', componentName || 'React class', location, typeSpecName);
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function
+must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator
+ (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location
+, typeSpecName, typeof error);
+        if (error instanceof Error &amp;&amp; !(error.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+
+          var stack = getStack ? getStack() : '';
+
+          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
+        }
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var errorOrNull = PropTypes.bool(42, 'myProp', 'MyComponent', 'prop');
+```
+
+It will throw an error:
+
+```
+Calling PropTypes validators directly is not supported by the `prop-types` package.
+Use PropTypes.<span class="apidocCodeKeywordSpan">checkPropTypes</span>() to call them.
+```
+
+(If you see **a warning** rather than an error with this message, please check the [above section about compatibility](#compatibility
+).)
+
+This is new behavior, and you will only encounter it when you migrate from `React.PropTypes` to the `prop-types` package. For the
+ vast majority of components, this doesnâ€™t matter, and if you didnâ€™t see [this warning](https://facebook.github.io/react/warnings
+/dont-call-proptypes.html) in your components, your code is safe to migrate. This is not a breaking change in React because you
+are only opting into this change for a component by explicitly changing your imports to use `prop-types`. If you temporarily need
+ the old behavior, you can keep using `React.PropTypes` until React 16.
+
+**If you absolutely need to trigger the validation manually**, call `PropTypes.checkPropTypes()`. Unlike the validators themselves
+, this function is safe to call in production, as it will be replaced by an empty function:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.element" id="apidoc.element.prop-types.element">
+        function <span class="apidocSignatureSpan">prop-types.</span>element
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">element = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.element.isRequired" id="apidoc.element.prop-types.element.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>element.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">element.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.factory" id="apidoc.element.prop-types.factory">
+        function <span class="apidocSignatureSpan">prop-types.</span>factory
+        <span class="apidocSignatureSpan">(isValidElement)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">factory = function (isValidElement) {
+  // It is still allowed in 15.5.
+  var throwOnDirectAccess = false;
+  return factory(isValidElement, throwOnDirectAccess);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.factoryWithThrowingShims" id="apidoc.element.prop-types.factoryWithThrowingShims">
+        function <span class="apidocSignatureSpan">prop-types.</span>factoryWithThrowingShims
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">factoryWithThrowingShims = function () {
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  function shim() {
+    invariant(
+      false,
+      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Use PropTypes.checkPropTypes() to call them. ' +
+      'Read more at http://fb.me/use-check-prop-types'
+    );
+  };
+  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  };
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim
+  };
+
+  ReactPropTypes.checkPropTypes = emptyFunction;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.factoryWithTypeCheckers" id="apidoc.element.prop-types.factoryWithTypeCheckers">
+        function <span class="apidocSignatureSpan">prop-types.</span>factoryWithTypeCheckers
+        <span class="apidocSignatureSpan">(isValidElement, throwOnDirectAccess)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
+<span class="apidocCodeCommentSpan">  /* global Symbol */
+</span>  var ITERATOR_SYMBOL = typeof Symbol === 'function' &amp;&amp; Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+
+  /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */
+  function getIteratorFn(maybeIterable) {
+    var iteratorFn = maybeIterable &amp;&amp; (ITERATOR_SYMBOL &amp;&amp; maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+    if (typeof iteratorFn === 'function') {
+      return iteratorFn;
+    }
+  }
+
+  /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null &amp;&amp; typeof propValue !== 'string' &amp;&amp;
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */
+
+  var ANONYMOUS = '&lt;&lt;anonymous&gt;&gt;';
+
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+  var ReactPropTypes = {
+    array: createPrimitiveTypeChecker('array'),
+    bool: createPrimitiveTypeChecker('boolean'),
+    func: createPrimitiveTypeChecker('function'),
+    number: createPrimitiveTypeChecker('number'),
+    object: createPrimitiveTypeChecker('object'),
+    string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
+
+    any: createAnyTypeChecker(),
+    arrayOf: createArrayOfTypeChecker,
+    element: createElementTypeChecker(),
+    instanceOf: createInstanceTypeChecker,
+    node: createNodeChecker(),
+    objectOf: createObjectOfTypeChecker,
+    oneOf: createEnumTypeChecker,
+    oneOfType: createUnionTypeChecker,
+    shape: createShapeTypeChecker
+  };
+
+  /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */
+  /*eslint-disable no-self-compare*/
+  function is(x, y) {
+    // SameValue algorithm
+    if (x === y) {
+      // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x &amp;&amp; y !== y;
+    }
+  }
+  /*eslint-enable no-self-compare*/
+
+  /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.func" id="apidoc.element.prop-types.func">
+        function <span class="apidocSignatureSpan">prop-types.</span>func
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">func = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.func.isRequired" id="apidoc.element.prop-types.func.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>func.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">func.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.instanceOf" id="apidoc.element.prop-types.instanceOf">
+        function <span class="apidocSignatureSpan">prop-types.</span>instanceOf
+        <span class="apidocSignatureSpan">(expectedClass)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createInstanceTypeChecker(expectedClass) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (!(props[propName] instanceof expectedClass)) {
+      var expectedClassName = expectedClass.name || ANONYMOUS;
+      var actualClassName = getClassName(props[propName]);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied
+ to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*       // An optional string prop named "description".
+*       description: Props.string,
+*
+*       // A required enum prop named "category".
+*       category: Props.oneOf(['News','Photos']).isRequired,
+*
+*       // A prop named "dialog" that requires an instance of Dialog.
+*       dialog: Props.<span class="apidocCodeKeywordSpan">instanceOf</span>(Dialog).isRequired
+*     },
+*     render: function() { ... }
+*   });
+*
+* A more formal specification of how these methods are used:
+*
+*   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.node" id="apidoc.element.prop-types.node">
+        function <span class="apidocSignatureSpan">prop-types.</span>node
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.node.isRequired" id="apidoc.element.prop-types.node.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>node.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.number" id="apidoc.element.prop-types.number">
+        function <span class="apidocSignatureSpan">prop-types.</span>number
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">number = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.number.isRequired" id="apidoc.element.prop-types.number.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>number.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">number.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.object" id="apidoc.element.prop-types.object">
+        function <span class="apidocSignatureSpan">prop-types.</span>object
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">object = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.object.isRequired" id="apidoc.element.prop-types.object.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>object.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">object.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.objectOf" id="apidoc.element.prop-types.objectOf">
+        function <span class="apidocSignatureSpan">prop-types.</span>objectOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createObjectOfTypeChecker(typeChecker) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (typeof typeChecker !== 'function') {
+      return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation
+ inside objectOf.');
+    }
+    var propValue = props[propName];
+    var propType = getPropType(propValue);
+    if (propType !== 'object') {
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' +
+componentName + '`, expected an object.'));
+    }
+    for (var key in propValue) {
+      if (propValue.hasOwnProperty(key)) {
+        var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.oneOf" id="apidoc.element.prop-types.oneOf">
+        function <span class="apidocSignatureSpan">prop-types.</span>oneOf
+        <span class="apidocSignatureSpan">(expectedValues)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEnumTypeChecker(expectedValues) {
+  if (!Array.isArray(expectedValues)) {
+    process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') :
+void 0;
+    return emptyFunction.thatReturnsNull;
+  }
+
+  function validate(props, propName, componentName, location, propFullName) {
+    var propValue = props[propName];
+    for (var i = 0; i &lt; expectedValues.length; i++) {
+      if (is(propValue, expectedValues[i])) {
+        return null;
+      }
+    }
+
+    var valuesString = JSON.stringify(expectedValues);
+    return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' +
+componentName + '`, expected one of ' + valuesString + '.'));
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*   var Props = require('ReactPropTypes');
+*   var MyArticle = React.createClass({
+*     propTypes: {
+*       // An optional string prop named "description".
+*       description: Props.string,
+*
+*       // A required enum prop named "category".
+*       category: Props.<span class="apidocCodeKeywordSpan">oneOf</span>(['News','Photos']).isRequired,
+*
+*       // A prop named "dialog" that requires an instance of Dialog.
+*       dialog: Props.instanceOf(Dialog).isRequired
+*     },
+*     render: function() { ... }
+*   });
+*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.oneOfType" id="apidoc.element.prop-types.oneOfType">
+        function <span class="apidocSignatureSpan">prop-types.</span>oneOfType
+        <span class="apidocSignatureSpan">(arrayOfTypeCheckers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createUnionTypeChecker(arrayOfTypeCheckers) {
+  if (!Array.isArray(arrayOfTypeCheckers)) {
+    process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array
+.') : void 0;
+    return emptyFunction.thatReturnsNull;
+  }
+
+  function validate(props, propName, componentName, location, propFullName) {
+    for (var i = 0; i &lt; arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+        return null;
+      }
+    }
+
+    return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.shape" id="apidoc.element.prop-types.shape">
+        function <span class="apidocSignatureSpan">prop-types.</span>shape
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createShapeTypeChecker(shapeTypes) {
+  function validate(props, propName, componentName, location, propFullName) {
+    var propValue = props[propName];
+    var propType = getPropType(propValue);
+    if (propType !== 'object') {
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' +
+componentName + '`, expected `object`.'));
+    }
+    for (var key in shapeTypes) {
+      var checker = shapeTypes[key];
+      if (!checker) {
+        continue;
+      }
+      var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+      if (error) {
+        return error;
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.string" id="apidoc.element.prop-types.string">
+        function <span class="apidocSignatureSpan">prop-types.</span>string
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">string = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.string.isRequired" id="apidoc.element.prop-types.string.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>string.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">string.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.symbol" id="apidoc.element.prop-types.symbol">
+        function <span class="apidocSignatureSpan">prop-types.</span>symbol
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">symbol = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.symbol.isRequired" id="apidoc.element.prop-types.symbol.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.</span>symbol.isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">symbol.isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.any" id="apidoc.module.prop-types.any">module prop-types.any</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.any.any" id="apidoc.element.prop-types.any.any">
+        function <span class="apidocSignatureSpan">prop-types.</span>any
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">any = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.any.isRequired" id="apidoc.element.prop-types.any.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.any.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.any.isRequired" id="apidoc.module.prop-types.any.isRequired">module prop-types.any.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.any.isRequired.isRequired" id="apidoc.element.prop-types.any.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.any.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.array" id="apidoc.module.prop-types.array">module prop-types.array</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.array.array" id="apidoc.element.prop-types.array.array">
+        function <span class="apidocSignatureSpan">prop-types.</span>array
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">array = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.array.isRequired" id="apidoc.element.prop-types.array.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.array.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.array.isRequired" id="apidoc.module.prop-types.array.isRequired">module prop-types.array.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.array.isRequired.isRequired" id="apidoc.element.prop-types.array.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.array.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.arrayOf" id="apidoc.module.prop-types.arrayOf">module prop-types.arrayOf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.arrayOf.arrayOf" id="apidoc.element.prop-types.arrayOf.arrayOf">
+        function <span class="apidocSignatureSpan">prop-types.</span>arrayOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createArrayOfTypeChecker(typeChecker) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (typeof typeChecker !== 'function') {
+      return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation
+ inside arrayOf.');
+    }
+    var propValue = props[propName];
+    if (!Array.isArray(propValue)) {
+      var propType = getPropType(propValue);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' +
+componentName + '`, expected an array.'));
+    }
+    for (var i = 0; i &lt; propValue.length; i++) {
+      var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+      if (error instanceof Error) {
+        return error;
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.bool" id="apidoc.module.prop-types.bool">module prop-types.bool</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.bool.bool" id="apidoc.element.prop-types.bool.bool">
+        function <span class="apidocSignatureSpan">prop-types.</span>bool
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bool = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+```
+
+However, code like this will not work with the `prop-types` package:
+
+```js
+// Will not work with `prop-types` package!
+var errorOrNull = PropTypes.<span class="apidocCodeKeywordSpan">bool</span>(42, 'myProp', 'MyComponent', '
+;prop');
+```
+
+It will throw an error:
+
+```
+Calling PropTypes validators directly is not supported by the `prop-types` package.
+Use PropTypes.checkPropTypes() to call them.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.bool.isRequired" id="apidoc.element.prop-types.bool.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.bool.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.bool.isRequired" id="apidoc.module.prop-types.bool.isRequired">module prop-types.bool.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.bool.isRequired.isRequired" id="apidoc.element.prop-types.bool.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.bool.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.checkPropTypes" id="apidoc.module.prop-types.checkPropTypes">module prop-types.checkPropTypes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.checkPropTypes.checkPropTypes" id="apidoc.element.prop-types.checkPropTypes.checkPropTypes">
+        function <span class="apidocSignatureSpan">prop-types.</span>checkPropTypes
+        <span class="apidocSignatureSpan">(typeSpecs, values, location, componentName, getStack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+  if (process.env.NODE_ENV !== 'production') {
+    for (var typeSpecName in typeSpecs) {
+      if (typeSpecs.hasOwnProperty(typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually
+from ' + 'React.PropTypes.', componentName || 'React class', location, typeSpecName);
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function
+must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator
+ (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location
+, typeSpecName, typeof error);
+        if (error instanceof Error &amp;&amp; !(error.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+
+          var stack = getStack ? getStack() : '';
+
+          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
+        }
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var errorOrNull = PropTypes.bool(42, 'myProp', 'MyComponent', 'prop');
+```
+
+It will throw an error:
+
+```
+Calling PropTypes validators directly is not supported by the `prop-types` package.
+Use PropTypes.<span class="apidocCodeKeywordSpan">checkPropTypes</span>() to call them.
+```
+
+(If you see **a warning** rather than an error with this message, please check the [above section about compatibility](#compatibility
+).)
+
+This is new behavior, and you will only encounter it when you migrate from `React.PropTypes` to the `prop-types` package. For the
+ vast majority of components, this doesnâ€™t matter, and if you didnâ€™t see [this warning](https://facebook.github.io/react/warnings
+/dont-call-proptypes.html) in your components, your code is safe to migrate. This is not a breaking change in React because you
+are only opting into this change for a component by explicitly changing your imports to use `prop-types`. If you temporarily need
+ the old behavior, you can keep using `React.PropTypes` until React 16.
+
+**If you absolutely need to trigger the validation manually**, call `PropTypes.checkPropTypes()`. Unlike the validators themselves
+, this function is safe to call in production, as it will be replaced by an empty function:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.element" id="apidoc.module.prop-types.element">module prop-types.element</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.element.element" id="apidoc.element.prop-types.element.element">
+        function <span class="apidocSignatureSpan">prop-types.</span>element
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">element = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.element.isRequired" id="apidoc.element.prop-types.element.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.element.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.element.isRequired" id="apidoc.module.prop-types.element.isRequired">module prop-types.element.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.element.isRequired.isRequired" id="apidoc.element.prop-types.element.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.element.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.factory" id="apidoc.module.prop-types.factory">module prop-types.factory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.factory.factory" id="apidoc.element.prop-types.factory.factory">
+        function <span class="apidocSignatureSpan">prop-types.</span>factory
+        <span class="apidocSignatureSpan">(isValidElement)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">factory = function (isValidElement) {
+  // It is still allowed in 15.5.
+  var throwOnDirectAccess = false;
+  return factory(isValidElement, throwOnDirectAccess);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.factoryWithThrowingShims" id="apidoc.module.prop-types.factoryWithThrowingShims">module prop-types.factoryWithThrowingShims</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.factoryWithThrowingShims.factoryWithThrowingShims" id="apidoc.element.prop-types.factoryWithThrowingShims.factoryWithThrowingShims">
+        function <span class="apidocSignatureSpan">prop-types.</span>factoryWithThrowingShims
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">factoryWithThrowingShims = function () {
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
+  function shim() {
+    invariant(
+      false,
+      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+      'Use PropTypes.checkPropTypes() to call them. ' +
+      'Read more at http://fb.me/use-check-prop-types'
+    );
+  };
+  shim.isRequired = shim;
+  function getShim() {
+    return shim;
+  };
+  var ReactPropTypes = {
+    array: shim,
+    bool: shim,
+    func: shim,
+    number: shim,
+    object: shim,
+    string: shim,
+    symbol: shim,
+
+    any: shim,
+    arrayOf: getShim,
+    element: shim,
+    instanceOf: getShim,
+    node: shim,
+    objectOf: getShim,
+    oneOf: getShim,
+    oneOfType: getShim,
+    shape: getShim
+  };
+
+  ReactPropTypes.checkPropTypes = emptyFunction;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.factoryWithTypeCheckers" id="apidoc.module.prop-types.factoryWithTypeCheckers">module prop-types.factoryWithTypeCheckers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.factoryWithTypeCheckers.factoryWithTypeCheckers" id="apidoc.element.prop-types.factoryWithTypeCheckers.factoryWithTypeCheckers">
+        function <span class="apidocSignatureSpan">prop-types.</span>factoryWithTypeCheckers
+        <span class="apidocSignatureSpan">(isValidElement, throwOnDirectAccess)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">factoryWithTypeCheckers = function (isValidElement, throwOnDirectAccess) {
+<span class="apidocCodeCommentSpan">  /* global Symbol */
+</span>  var ITERATOR_SYMBOL = typeof Symbol === 'function' &amp;&amp; Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+
+  /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */
+  function getIteratorFn(maybeIterable) {
+    var iteratorFn = maybeIterable &amp;&amp; (ITERATOR_SYMBOL &amp;&amp; maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+    if (typeof iteratorFn === 'function') {
+      return iteratorFn;
+    }
+  }
+
+  /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null &amp;&amp; typeof propValue !== 'string' &amp;&amp;
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */
+
+  var ANONYMOUS = '&lt;&lt;anonymous&gt;&gt;';
+
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+  var ReactPropTypes = {
+    array: createPrimitiveTypeChecker('array'),
+    bool: createPrimitiveTypeChecker('boolean'),
+    func: createPrimitiveTypeChecker('function'),
+    number: createPrimitiveTypeChecker('number'),
+    object: createPrimitiveTypeChecker('object'),
+    string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
+
+    any: createAnyTypeChecker(),
+    arrayOf: createArrayOfTypeChecker,
+    element: createElementTypeChecker(),
+    instanceOf: createInstanceTypeChecker,
+    node: createNodeChecker(),
+    objectOf: createObjectOfTypeChecker,
+    oneOf: createEnumTypeChecker,
+    oneOfType: createUnionTypeChecker,
+    shape: createShapeTypeChecker
+  };
+
+  /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */
+  /*eslint-disable no-self-compare*/
+  function is(x, y) {
+    // SameValue algorithm
+    if (x === y) {
+      // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x &amp;&amp; y !== y;
+    }
+  }
+  /*eslint-enable no-self-compare*/
+
+  /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.func" id="apidoc.module.prop-types.func">module prop-types.func</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.func.func" id="apidoc.element.prop-types.func.func">
+        function <span class="apidocSignatureSpan">prop-types.</span>func
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">func = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.func.isRequired" id="apidoc.element.prop-types.func.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.func.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.func.isRequired" id="apidoc.module.prop-types.func.isRequired">module prop-types.func.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.func.isRequired.isRequired" id="apidoc.element.prop-types.func.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.func.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.instanceOf" id="apidoc.module.prop-types.instanceOf">module prop-types.instanceOf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.instanceOf.instanceOf" id="apidoc.element.prop-types.instanceOf.instanceOf">
+        function <span class="apidocSignatureSpan">prop-types.</span>instanceOf
+        <span class="apidocSignatureSpan">(expectedClass)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createInstanceTypeChecker(expectedClass) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (!(props[propName] instanceof expectedClass)) {
+      var expectedClassName = expectedClass.name || ANONYMOUS;
+      var actualClassName = getClassName(props[propName]);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied
+ to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*       // An optional string prop named "description".
+*       description: Props.string,
+*
+*       // A required enum prop named "category".
+*       category: Props.oneOf(['News','Photos']).isRequired,
+*
+*       // A prop named "dialog" that requires an instance of Dialog.
+*       dialog: Props.<span class="apidocCodeKeywordSpan">instanceOf</span>(Dialog).isRequired
+*     },
+*     render: function() { ... }
+*   });
+*
+* A more formal specification of how these methods are used:
+*
+*   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.node" id="apidoc.module.prop-types.node">module prop-types.node</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.node.node" id="apidoc.element.prop-types.node.node">
+        function <span class="apidocSignatureSpan">prop-types.</span>node
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.node.isRequired" id="apidoc.element.prop-types.node.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.node.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.node.isRequired" id="apidoc.module.prop-types.node.isRequired">module prop-types.node.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.node.isRequired.isRequired" id="apidoc.element.prop-types.node.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.node.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.number" id="apidoc.module.prop-types.number">module prop-types.number</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.number.number" id="apidoc.element.prop-types.number.number">
+        function <span class="apidocSignatureSpan">prop-types.</span>number
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">number = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.number.isRequired" id="apidoc.element.prop-types.number.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.number.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.number.isRequired" id="apidoc.module.prop-types.number.isRequired">module prop-types.number.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.number.isRequired.isRequired" id="apidoc.element.prop-types.number.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.number.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.object" id="apidoc.module.prop-types.object">module prop-types.object</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.object.object" id="apidoc.element.prop-types.object.object">
+        function <span class="apidocSignatureSpan">prop-types.</span>object
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">object = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.object.isRequired" id="apidoc.element.prop-types.object.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.object.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.object.isRequired" id="apidoc.module.prop-types.object.isRequired">module prop-types.object.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.object.isRequired.isRequired" id="apidoc.element.prop-types.object.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.object.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.objectOf" id="apidoc.module.prop-types.objectOf">module prop-types.objectOf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.objectOf.objectOf" id="apidoc.element.prop-types.objectOf.objectOf">
+        function <span class="apidocSignatureSpan">prop-types.</span>objectOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createObjectOfTypeChecker(typeChecker) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (typeof typeChecker !== 'function') {
+      return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation
+ inside objectOf.');
+    }
+    var propValue = props[propName];
+    var propType = getPropType(propValue);
+    if (propType !== 'object') {
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' +
+componentName + '`, expected an object.'));
+    }
+    for (var key in propValue) {
+      if (propValue.hasOwnProperty(key)) {
+        var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.oneOf" id="apidoc.module.prop-types.oneOf">module prop-types.oneOf</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.oneOf.oneOf" id="apidoc.element.prop-types.oneOf.oneOf">
+        function <span class="apidocSignatureSpan">prop-types.</span>oneOf
+        <span class="apidocSignatureSpan">(expectedValues)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEnumTypeChecker(expectedValues) {
+  if (!Array.isArray(expectedValues)) {
+    process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') :
+void 0;
+    return emptyFunction.thatReturnsNull;
+  }
+
+  function validate(props, propName, componentName, location, propFullName) {
+    var propValue = props[propName];
+    for (var i = 0; i &lt; expectedValues.length; i++) {
+      if (is(propValue, expectedValues[i])) {
+        return null;
+      }
+    }
+
+    var valuesString = JSON.stringify(expectedValues);
+    return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' +
+componentName + '`, expected one of ' + valuesString + '.'));
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*   var Props = require('ReactPropTypes');
+*   var MyArticle = React.createClass({
+*     propTypes: {
+*       // An optional string prop named "description".
+*       description: Props.string,
+*
+*       // A required enum prop named "category".
+*       category: Props.<span class="apidocCodeKeywordSpan">oneOf</span>(['News','Photos']).isRequired,
+*
+*       // A prop named "dialog" that requires an instance of Dialog.
+*       dialog: Props.instanceOf(Dialog).isRequired
+*     },
+*     render: function() { ... }
+*   });
+*
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.oneOfType" id="apidoc.module.prop-types.oneOfType">module prop-types.oneOfType</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.oneOfType.oneOfType" id="apidoc.element.prop-types.oneOfType.oneOfType">
+        function <span class="apidocSignatureSpan">prop-types.</span>oneOfType
+        <span class="apidocSignatureSpan">(arrayOfTypeCheckers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createUnionTypeChecker(arrayOfTypeCheckers) {
+  if (!Array.isArray(arrayOfTypeCheckers)) {
+    process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array
+.') : void 0;
+    return emptyFunction.thatReturnsNull;
+  }
+
+  function validate(props, propName, componentName, location, propFullName) {
+    for (var i = 0; i &lt; arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+        return null;
+      }
+    }
+
+    return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.prop_types" id="apidoc.module.prop-types.prop_types">module prop-types.prop_types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.any" id="apidoc.element.prop-types.prop_types.any">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>any
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">any = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.array" id="apidoc.element.prop-types.prop_types.array">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>array
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">array = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.arrayOf" id="apidoc.element.prop-types.prop_types.arrayOf">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>arrayOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createArrayOfTypeChecker(typeChecker) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (typeof typeChecker !== 'function') {
+      return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation
+ inside arrayOf.');
+    }
+    var propValue = props[propName];
+    if (!Array.isArray(propValue)) {
+      var propType = getPropType(propValue);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' +
+componentName + '`, expected an array.'));
+    }
+    for (var i = 0; i &lt; propValue.length; i++) {
+      var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+      if (error instanceof Error) {
+        return error;
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.bool" id="apidoc.element.prop-types.prop_types.bool">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>bool
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bool = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+```
+
+However, code like this will not work with the `prop-types` package:
+
+```js
+// Will not work with `prop-types` package!
+var errorOrNull = PropTypes.<span class="apidocCodeKeywordSpan">bool</span>(42, 'myProp', 'MyComponent', '
+;prop');
+```
+
+It will throw an error:
+
+```
+Calling PropTypes validators directly is not supported by the `prop-types` package.
+Use PropTypes.checkPropTypes() to call them.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.checkPropTypes" id="apidoc.element.prop-types.prop_types.checkPropTypes">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>checkPropTypes
+        <span class="apidocSignatureSpan">(typeSpecs, values, location, componentName, getStack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+  if ("development" !== 'production') {
+    for (var typeSpecName in typeSpecs) {
+      if (typeSpecs.hasOwnProperty(typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually
+from ' + 'React.PropTypes.', componentName || 'React class', location, typeSpecName);
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function
+must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator
+ (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location
+, typeSpecName, typeof error);
+        if (error instanceof Error &amp;&amp; !(error.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+
+          var stack = getStack ? getStack() : '';
+
+          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
+        }
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var errorOrNull = PropTypes.bool(42, 'myProp', 'MyComponent', 'prop');
+```
+
+It will throw an error:
+
+```
+Calling PropTypes validators directly is not supported by the `prop-types` package.
+Use PropTypes.<span class="apidocCodeKeywordSpan">checkPropTypes</span>() to call them.
+```
+
+(If you see **a warning** rather than an error with this message, please check the [above section about compatibility](#compatibility
+).)
+
+This is new behavior, and you will only encounter it when you migrate from `React.PropTypes` to the `prop-types` package. For the
+ vast majority of components, this doesnâ€™t matter, and if you didnâ€™t see [this warning](https://facebook.github.io/react/warnings
+/dont-call-proptypes.html) in your components, your code is safe to migrate. This is not a breaking change in React because you
+are only opting into this change for a component by explicitly changing your imports to use `prop-types`. If you temporarily need
+ the old behavior, you can keep using `React.PropTypes` until React 16.
+
+**If you absolutely need to trigger the validation manually**, call `PropTypes.checkPropTypes()`. Unlike the validators themselves
+, this function is safe to call in production, as it will be replaced by an empty function:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.element" id="apidoc.element.prop-types.prop_types.element">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>element
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">element = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.func" id="apidoc.element.prop-types.prop_types.func">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>func
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">func = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.instanceOf" id="apidoc.element.prop-types.prop_types.instanceOf">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>instanceOf
+        <span class="apidocSignatureSpan">(expectedClass)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createInstanceTypeChecker(expectedClass) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (!(props[propName] instanceof expectedClass)) {
+      var expectedClassName = expectedClass.name || ANONYMOUS;
+      var actualClassName = getClassName(props[propName]);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied
+ to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*       // An optional string prop named "description".
+*       description: Props.string,
+*
+*       // A required enum prop named "category".
+*       category: Props.oneOf(['News','Photos']).isRequired,
+*
+*       // A prop named "dialog" that requires an instance of Dialog.
+*       dialog: Props.<span class="apidocCodeKeywordSpan">instanceOf</span>(Dialog).isRequired
+*     },
+*     render: function() { ... }
+*   });
+*
+* A more formal specification of how these methods are used:
+*
+*   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.node" id="apidoc.element.prop-types.prop_types.node">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>node
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.number" id="apidoc.element.prop-types.prop_types.number">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>number
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">number = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.object" id="apidoc.element.prop-types.prop_types.object">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>object
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">object = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.objectOf" id="apidoc.element.prop-types.prop_types.objectOf">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>objectOf
+        <span class="apidocSignatureSpan">(typeChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createObjectOfTypeChecker(typeChecker) {
+  function validate(props, propName, componentName, location, propFullName) {
+    if (typeof typeChecker !== 'function') {
+      return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation
+ inside objectOf.');
+    }
+    var propValue = props[propName];
+    var propType = getPropType(propValue);
+    if (propType !== 'object') {
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' +
+componentName + '`, expected an object.'));
+    }
+    for (var key in propValue) {
+      if (propValue.hasOwnProperty(key)) {
+        var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.oneOf" id="apidoc.element.prop-types.prop_types.oneOf">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>oneOf
+        <span class="apidocSignatureSpan">(expectedValues)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEnumTypeChecker(expectedValues) {
+  if (!Array.isArray(expectedValues)) {
+    "development" !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void
+ 0;
+    return emptyFunction.thatReturnsNull;
+  }
+
+  function validate(props, propName, componentName, location, propFullName) {
+    var propValue = props[propName];
+    for (var i = 0; i &lt; expectedValues.length; i++) {
+      if (is(propValue, expectedValues[i])) {
+        return null;
+      }
+    }
+
+    var valuesString = JSON.stringify(expectedValues);
+    return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' +
+componentName + '`, expected one of ' + valuesString + '.'));
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*   var Props = require('ReactPropTypes');
+*   var MyArticle = React.createClass({
+*     propTypes: {
+*       // An optional string prop named "description".
+*       description: Props.string,
+*
+*       // A required enum prop named "category".
+*       category: Props.<span class="apidocCodeKeywordSpan">oneOf</span>(['News','Photos']).isRequired,
+*
+*       // A prop named "dialog" that requires an instance of Dialog.
+*       dialog: Props.instanceOf(Dialog).isRequired
+*     },
+*     render: function() { ... }
+*   });
+*
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.oneOfType" id="apidoc.element.prop-types.prop_types.oneOfType">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>oneOfType
+        <span class="apidocSignatureSpan">(arrayOfTypeCheckers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createUnionTypeChecker(arrayOfTypeCheckers) {
+  if (!Array.isArray(arrayOfTypeCheckers)) {
+    "development" !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') :
+void 0;
+    return emptyFunction.thatReturnsNull;
+  }
+
+  function validate(props, propName, componentName, location, propFullName) {
+    for (var i = 0; i &lt; arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+        return null;
+      }
+    }
+
+    return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.shape" id="apidoc.element.prop-types.prop_types.shape">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>shape
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createShapeTypeChecker(shapeTypes) {
+  function validate(props, propName, componentName, location, propFullName) {
+    var propValue = props[propName];
+    var propType = getPropType(propValue);
+    if (propType !== 'object') {
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' +
+componentName + '`, expected `object`.'));
+    }
+    for (var key in shapeTypes) {
+      var checker = shapeTypes[key];
+      if (!checker) {
+        continue;
+      }
+      var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+      if (error) {
+        return error;
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.string" id="apidoc.element.prop-types.prop_types.string">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>string
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">string = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.prop_types.symbol" id="apidoc.element.prop-types.prop_types.symbol">
+        function <span class="apidocSignatureSpan">prop-types.prop_types.</span>symbol
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">symbol = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.shape" id="apidoc.module.prop-types.shape">module prop-types.shape</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.shape.shape" id="apidoc.element.prop-types.shape.shape">
+        function <span class="apidocSignatureSpan">prop-types.</span>shape
+        <span class="apidocSignatureSpan">(shapeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createShapeTypeChecker(shapeTypes) {
+  function validate(props, propName, componentName, location, propFullName) {
+    var propValue = props[propName];
+    var propType = getPropType(propValue);
+    if (propType !== 'object') {
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' +
+componentName + '`, expected `object`.'));
+    }
+    for (var key in shapeTypes) {
+      var checker = shapeTypes[key];
+      if (!checker) {
+        continue;
+      }
+      var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+      if (error) {
+        return error;
+      }
+    }
+    return null;
+  }
+  return createChainableTypeChecker(validate);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.string" id="apidoc.module.prop-types.string">module prop-types.string</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.string.string" id="apidoc.element.prop-types.string.string">
+        function <span class="apidocSignatureSpan">prop-types.</span>string
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">string = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.string.isRequired" id="apidoc.element.prop-types.string.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.string.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.string.isRequired" id="apidoc.module.prop-types.string.isRequired">module prop-types.string.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.string.isRequired.isRequired" id="apidoc.element.prop-types.string.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.string.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.symbol" id="apidoc.module.prop-types.symbol">module prop-types.symbol</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.symbol.symbol" id="apidoc.element.prop-types.symbol.symbol">
+        function <span class="apidocSignatureSpan">prop-types.</span>symbol
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">symbol = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.symbol.isRequired" id="apidoc.element.prop-types.symbol.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.symbol.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.prop-types.symbol.isRequired" id="apidoc.module.prop-types.symbol.isRequired">module prop-types.symbol.isRequired</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.prop-types.symbol.isRequired.isRequired" id="apidoc.element.prop-types.symbol.isRequired.isRequired">
+        function <span class="apidocSignatureSpan">prop-types.symbol.</span>isRequired
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isRequired = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
