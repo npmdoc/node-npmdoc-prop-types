@@ -1,4 +1,7 @@
-# api documentation for  [prop-types (v15.5.8)](https://facebook.github.io/react/)  [![npm package](https://img.shields.io/npm/v/npmdoc-prop-types.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-prop-types) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-prop-types.svg)](https://travis-ci.org/npmdoc/node-npmdoc-prop-types)
+# npmdoc-prop-types
+
+#### basic api documentation for  [prop-types (v15.5.8)](https://facebook.github.io/react/)  [![npm package](https://img.shields.io/npm/v/npmdoc-prop-types.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-prop-types) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-prop-types.svg)](https://travis-ci.org/npmdoc/node-npmdoc-prop-types)
+
 #### Runtime type checking for React props and similar objects.
 
 [![NPM](https://nodei.co/npm/prop-types.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/prop-types)
@@ -103,7 +106,8 @@
         "umd": "NODE_ENV=development browserify index.js -t envify --standalone PropTypes -o prop-types.js",
         "umd-min": "NODE_ENV=production browserify index.js -t envify -t uglifyify --standalone PropTypes  -p bundle-collapser/plugin -o | uglifyjs --compress unused,dead_code -o prop-types.min.js"
     },
-    "version": "15.5.8"
+    "version": "15.5.8",
+    "bin": {}
 }
 ```
 
